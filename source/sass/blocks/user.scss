@@ -1,0 +1,116 @@
+.nav-user {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin-right: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 40px;
+  }
+}
+
+.user__link {
+  color: $black-basic;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+
+  &:hover,
+  &:focus {
+    color: $primary-color;
+
+    .user__icon {
+      fill: $primary-color;
+    }
+  }
+
+  &:active {
+    background-color: $sub-color;
+    color: $primary-color;
+
+    .user__icon {
+      fill: $primary-color;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &:active {
+      background-color: $sub-color;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    box-sizing: border-box;
+    height: 80px;
+    padding: 32px 20px;
+    margin-right: 20px;
+  }
+}
+
+.user__icon {
+  fill: $black-basic;
+
+  @media (min-width: $desktop-width) {
+    margin-right: 8px;
+  }
+}
+
+.user__button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 60px;
+  height: 60px;
+
+  &:hover,
+  &:focus {
+    color: $primary-color;
+
+    .user__icon {
+      fill: $primary-color;
+    }
+  }
+
+  &:active {
+    background-color: $sub-color;
+    color: $primary-color;
+
+    .user__icon {
+      fill: $primary-color;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &:active {
+      background-color: $sub-color;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 80px;
+    width: 100%;
+    padding: 32px 20px;
+  }
+}
+
+.user__text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+}
