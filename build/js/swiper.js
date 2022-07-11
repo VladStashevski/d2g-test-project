@@ -1,0 +1,1 @@
+const swiper=new Swiper(".slider",{loop:!0,grabCursor:!0,pagination:{el:".slider__pagination",bulletClass:"slider__pagination-bullet",bulletActiveClass:"slider__pagination-bullet--active",clickable:!0},navigation:{nextEl:".slider__navigation--next",prevEl:".slider__navigation--prev",disabledClass:"slider__navigation--disabled",enabled:!0}});
