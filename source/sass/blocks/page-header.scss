@@ -1,0 +1,248 @@
+.page-header__logo {
+  margin-right: auto;
+  margin-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 40px;
+  }
+}
+
+.page-header__logo-icon {
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--tablet {
+      display: block;
+    }
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
+  }
+}
+
+.page-header__logo-link {
+  display: block;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.page-header__logo-text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+    margin-left: 20px;
+    width: 150px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.navigation__list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  flex-direction: column;
+  top: 60px;
+  left: 0;
+  background-color: $white-basic;
+
+  &--closed {
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &--opened {
+    @media (max-width: 767px) {
+      position: absolute;
+      display: flex;
+      z-index: 2;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    margin-left: 68px;
+    margin-right: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 140px;
+    margin-right: auto;
+  }
+}
+
+.page-header__nav {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 60px;
+  box-sizing: border-box;
+  width: 320px;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    min-height: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+  }
+}
+
+.navigation__list--no-js {
+  display: flex;
+  order: 4;
+  width: 100%;
+}
+
+.site-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid #f0ebff;
+
+  &:first-of-type {
+    border-top: 1px solid #f0ebff;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: max-content;
+    height: 80px;
+    border: none;
+    margin-right: 2px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 23px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+
+.site-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: $black-basic;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+
+  &:not(&--current):active {
+    background-color: $sub-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 32px 20px;
+    box-sizing: border-box;
+
+    &--current {
+      position: relative;
+      color: $primary-color;
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: $primary-color;
+        bottom: 0;
+      }
+    }
+
+    &:not(&--current):hover {
+      color: $primary-color;
+    }
+
+    &:not(&--current):active {
+      color: $primary-color;
+    }
+  }
+}
+
+.site-list__icon {
+  display: none;
+  fill: $black-basic;
+}
+
+.navigation__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 60px;
+  height: 60px;
+
+  &--no-js {
+    display: none;
+  }
+
+  &--open {
+    .site-list__icon--open {
+      display: block;
+    }
+  }
+
+  &--close {
+    .site-list__icon--close {
+      display: block;
+    }
+  }
+
+  &:active {
+    background-color: $sub-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
